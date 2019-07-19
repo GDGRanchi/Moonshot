@@ -1,0 +1,158 @@
+<div class="container mt-5 mb-5">
+    <div class="row pt-5 mt-5">
+        <div class="col-md-6">
+            <img style="border-radius: 32px" src="assets/images/cover.png" class="p8" width="100%" />
+        </div>
+        <div class="col-md-6 pt-1" style="align-self: center">
+            <h5>Welcome to {{communityName}},</h5>
+            <h1 class="color-333333">Let's solve community problems with <span class="color-F64060">c<>de</span>!</h1>
+            <p class="mt-4">What's your moonshot? GDG is not only a community which organizes meetups, webinars and fests!
+                We are also in the pursuit of identifying the hurdles in our community that can be solved by code.</p>
+        </div>
+    </div>
+    <h5 class="pt-4 pb-2">Upcoming Events & Meetups</h5>
+    <div *ngIf="!isFetchEventsComplete" class="row">
+        <div class="col-md-4 over-p-lr">
+            <div class="material-border">
+                <div class="box shine"></div>
+                <div class="shine-div">
+                    <div class="lines shine"></div>
+                    <div class="lines shine"></div>
+                    <div class="lines shine"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 over-p-lr">
+            <div class="material-border">
+                <div class="box shine"></div>
+                <div class="shine-div">
+                    <div class="lines shine"></div>
+                    <div class="lines shine"></div>
+                    <div class="lines shine"></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4 over-p-lr">
+            <div class="material-border">
+                <div class="box shine"></div>
+                <div class="shine-div">
+                    <div class="lines shine"></div>
+                    <div class="lines shine"></div>
+                    <div class="lines shine"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="isFetchEventsComplete" class="row">
+        <div *ngFor="let data of upcomingEvents | slice:0:6;" class="col-md-4 over-p-lr">
+            <div class="material-border">
+                <h5 class="font-medium">{{data.name}}</h5>
+                <div class="mt-4">
+                    <p class="font-regular">
+                    <i class="event-icon mr-2" nz-icon [nzType]="'clock-circle'"></i>{{data.time}}, {{data.date}}.
+                    <br><i class="event-icon mr-2" nz-icon [nzType]="'car'"></i>{{data.venue}}.
+                    <br><i class="event-icon mr-2" nz-icon [nzType]="'smile'"></i>{{data.count}} members attending.</p>
+                </div>
+                <a target="_blank" href="{{data.link}}"><button style="width: 100%" nz-button [nzSize]="large" nzType="primary">More Details</button></a>
+            </div>
+        </div>
+        <div *ngIf="upcomingEvents.length > 6" class="col-md-12">
+            <a target="_blank" routerLink="/events" routerLinkActive="active"><button nz-button [nzSize]="large" nzType="link">View All Upcoming Events<i style="margin-left: 8px; font-size: 18px" class="mr-2" nz-icon [nzType]="'double-right'"></i></button></a>
+        </div>
+    </div>
+    <h5 class="pt-4 pb-2">Why & What is GDG?</h5>
+    <div class="row">
+        <div class="col-md-12 over-p-lr">
+            <div class="material-border">
+                <div class="text-center justify-content-center">
+                    <img class="mt-2" alt="GDG Logo" src="https://developers.google.com/community/gdg/images/gdg_lockup.png" height="40px" />
+                    <div class="mt-5 mb-5">
+                        <img class="mr4" src="assets/icons/amp.png" height="32px" />
+                        <img class="mr4" src="assets/icons/android.png" height="32px" />
+                        <img class="mr4" src="assets/icons/angular.png" height="32px" />
+                        <img class="mr4" src="assets/icons/assistant.png" height="32px" />
+                        <img class="mr4" src="assets/icons/firebase.png" height="32px" />
+                        <img class="mr4" src="assets/icons/flutter.png" height="32px" />
+                        <img class="mr4" src="assets/icons/googlecloud.png" height="32px" />
+                        <img class="mr4" src="assets/icons/pwa.png" height="32px" />
+                        <img src="assets/icons/tensorflow.png" height="32px" />
+                    </div>
+                </div>
+                <p class="mt-3 font-regular">When you join a GDG, you’ll have the opportunity to meet local developers with similar interests in technology, attend talks on a wide range of technical topics, and learn new skills through hands-on workshops.
+                    <br><br>GDG prides itself on being an inclusive environment. Everyone and anyone interested in tech - from beginner developers to experienced professionals are welcome to join.
+                </p>
+            </div>
+        </div>
+    </div>
+    <h5 class="pt-4 pb-2">What events do we conduct?</h5>
+    <div class="row justify-content-center">
+        <div class="col-md-12 over-p-lr">
+            <div class="material-border">
+                <p class="mt-2 mb-5 font-regular">We keep a lot of things in mind that comes out beneficial to our local community.
+                    To better carter the whole community, various types of events are conducted all around the year. Anyone can participate in any event with prior registration through our communicated channels.
+                </p>
+                <div class="row">
+                    <div class="col-md-2 text-center">
+                        <i class="about-icon mr-2" nz-icon [nzType]="'team'"></i>
+                        <h4>Meetups</h4>
+                        <p class="font-regular">Regular in person events to boost networking.</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <i class="about-icon mr-2" nz-icon [nzType]="'crown'"></i>
+                        <h4>Hackathons</h4>
+                        <p class="font-regular">Proove your intellect in tech and win home prizes.</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <i class="about-icon mr-2" nz-icon [nzType]="'desktop'"></i>
+                        <h4>Webinars</h4>
+                        <p class="font-regular">Enjoy the comfort of learning from any place.</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <i class="about-icon mr-2" nz-icon [nzType]="'read'"></i>
+                        <h4>Students</h4>
+                        <p class="font-regular">An exclusive sessions cartered for college students.</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <i class="about-icon mr-2" nz-icon [nzType]="'laptop'"></i>
+                        <h4>Study Jams</h4>
+                        <p class="font-regular">Learn a new topic the practical way.</p>
+                    </div>
+                    <div class="col-md-2 text-center">
+                        <i class="about-icon mr-2" nz-icon [nzType]="'global'"></i>
+                        <h4>Summits</h4>
+                        <p class="font-regular">A day full of focused talks & sessions.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h5 class="pt-4 pb-2">We are thankful to our Partners & Sponsors</h5>
+    <div class="row">
+        <div class="col-md-12 over-p-lr">
+            <div class="material-border">
+                <div class="text-center mb-3">
+                    <h5 class="pt-4 pb-4">Community Partners</h5>
+                    <div class="text-center justify-content-center mb-2">
+                        <img *ngFor="let partner of partnersList" class="material-border-image" alt="{{partner.name}}" [src]='partner.logoPath' height="32px" />
+                    </div>
+                    <h5 class="pt-4 pb-4">Sponsors</h5>
+                    <div class="row justify-content-center text-center mb-2">
+                        <div class="material-border-image" *ngFor="let sponsor of sponsorsList"
+                        [ngClass]="{'fill-gold': sponsor.level === 'Gold', 'fill-silver': sponsor.level === 'Silver', 'fill-bronze': sponsor.level === 'Bronze'}">
+                            <img alt="{{sponsor.name}}" [src]='sponsor.logoPath' height="32px" />
+                            <h6 style="text-transform: uppercase;" *ngIf="sponsor.level === 'Gold'" class="h6-gold">{{sponsor.level}}</h6>
+                            <h6 style="text-transform: uppercase;" *ngIf="sponsor.level === 'Silver'" class="h6-silver">{{sponsor.level}}</h6>
+                            <h6 style="text-transform: uppercase;" *ngIf="sponsor.level === 'Bronze'" class="h6-bronze">{{sponsor.level}}</h6>
+                            <h6 style="text-transform: uppercase;" *ngIf="sponsor.level !== 'Gold' && sponsor.level !== 'Silver' && sponsor.level !== 'Bronze'" class="h6-default">{{sponsor.level}}</h6>
+                        </div>
+                    </div>
+                </div>
+                <p class="pt-4 font-regular">
+                    Our community partners play a helpful role in successfully running the community initiatives and {{communityName}} is thankful to them.
+                    We also extend our sincere thanks to all our sponsors who help us in providing logistics, venue, resource persons and more.
+                    <br><br>If you or your company is interested in working with GDG Cloud Coimbatore, contact us via {{communityEmail}} or {{communityMobile}}.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

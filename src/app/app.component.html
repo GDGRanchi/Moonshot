@@ -1,0 +1,65 @@
+<header class="clearfix" id="header">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-4">
+        <a routerLink="/" routerLinkActive="active"><img [src]='logoPath' height="60px" style="margin: -8px"/></a>
+        <i (click)="bottomMenu()" style="margin-top: 12px; float: right" class="d-lg-none" nz-icon [nzType]="'down-circle'"></i>
+      </div>
+      <div class="col-md-8 d-none d-lg-block">
+        <div style="float: right">
+          <a routerLink="/" routerLinkActive="active"><button nz-button [nzSize]="'large'" nzType="default">Home</button></a>
+          <a routerLink="/events" routerLinkActive="active"><button nz-button [nzSize]="'large'" nzType="default">Events</button></a>
+          <a routerLink="/team" routerLinkActive="active"><button nz-button [nzSize]="'large'" nzType="default">Team</button></a>
+          <a routerLink="/contact" routerLinkActive="active"><button nz-button [nzSize]="'large'" nzType="default">Contact</button></a>
+          <a target="_blank" href="{{meetupPath}}"><button style="background-color: #F64060; border-color: #F64060" nz-button [nzSize]="'large'" nzType="primary">Become a Member</button></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<router-outlet></router-outlet>
+<div style="background: #f7f7f7">
+    <div class="container p-5">
+        <div class="row mb-2">
+            <div class="col-md-3 mb-3">
+                <h5 class="mb-4">About Us</h5>
+                <a class="font-regular color-333333" href="https://developers.google.com/programs/community/gdg/" target="_blank">GDG Program</a><br>
+                <a class="font-regular color-333333" href="https://cloud.google.com/community/meetups" target="_blank">GDG Cloud Program</a><br>
+                <a class="font-regular color-333333" href="https://www.womentechmakers.com/" target="_blank">Women Techmakers Program</a><br>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h5 class="mb-4">Contribute</h5>
+                <a class="font-regular color-333333" href="mailto:{{communityEmail}}" target="_blank">Press Kit / Decks</a><br>
+                <a class="font-regular color-333333" href="mailto:{{communityEmail}}" target="_blank">Venue Sponsorship</a><br>
+                <a class="font-regular color-333333" href="mailto:{{communityEmail}}" target="_blank">Volunteer Registration</a><br>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h5 class="mb-4">Developer Consoles</h5>
+                <a class="font-regular color-333333" href="https://console.firebase.google.com" target="_blank">Firebase Console</a><br>
+                <a class="font-regular color-333333" href="https://console.cloud.google.com" target="_blank">Google Cloud Console</a><br>
+                <a class="font-regular color-333333" href="https://play.google.com/apps/publish" target="_blank">Google Play Developer Console</a><br>
+            </div>
+            <div class="col-md-3 mb-3">
+                <h5 class="mb-4">Policies & Legal</h5>
+                <a class="font-regular color-333333" href="https://developers.google.com/community/gdg/organizers/resources/" target="_blank">Code of Conduct</a><br>
+                <a class="font-regular color-333333" href="https://developers.google.com/community/gdg/organizers/resources/" target="_blank">Community Guidelines</a><br>
+                <a class="font-regular color-333333" href="https://www.google.com/events/policy/anti-harassmentpolicy.html" target="_blank">Anti-Harassment Policy</a><br>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-6">
+                <a routerLink="/" routerLinkActive="active"><img [src]='logoPath' height="64px"/></a>
+            </div>
+            <div class="col-md-6 row" style="direction: rtl">
+                <div style="align-self: center">
+                    <a target="_blank" href="{{githubPath}}"><i style="margin-left: 4px" nz-icon [nzType]="'github'"></i></a> 
+                    <a target="_blank" href="{{instagramPath}}"><i style="margin-left: 4px" nz-icon [nzType]="'instagram'"></i></a> 
+                    <a target="_blank" href="{{twitterPath}}"><i style="margin-left: 4px" nz-icon [nzType]="'twitter'"></i></a> 
+                    <a target="_blank" href="{{facebookPath}}"><i style="margin-left: 4px" nz-icon [nzType]="'facebook'"></i></a>   
+                    <a target="_blank" href="{{meetupPath}}"><img height="20px" style="margin-left: 4px" src="assets/icons/meetup.png"></a>                
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

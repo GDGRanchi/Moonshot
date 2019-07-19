@@ -1,0 +1,283 @@
+@import "./material.css";
+
+#header {
+  background: #fff;
+  padding: 8px;
+  box-shadow: 0 2px 8px #999;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 100%;
+  position:fixed;
+  top:0;
+}
+
+[nz-button] {
+  margin-right: 8px;
+}
+
+[nz-icon] {
+  vertical-align: 0;
+  margin-left: 12px;
+  font-size: 20px;
+  color: #666;
+}
+
+* {
+    font-family: 'Product Sans Medium Regular' !important;
+}
+
+.p8 {
+  padding: 8px;
+}
+
+.mr4 {
+  margin-right: 4px;
+}
+
+.color-F64060 {
+  color: #F64060;
+}
+
+.color-333333 {
+  color: #333;
+}
+
+.material-border {
+  border: 1px solid #CCC;
+  margin: 8px;
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.material-border-image {
+  border: 1px solid #CCC;
+  margin: 8px;
+  min-height: 64px;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.fill-gold {
+  background-color: #fffef9;
+  border-color: #e6c900;
+}
+
+.h6-gold {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  color: #e6c900;
+  border-top: 1px solid #e6c900;
+  border-radius: 32px;
+  padding-top: 8px;
+}
+
+.h6-silver {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  color: #454545;
+  border-top: 1px solid #454545;
+  border-radius: 32px;
+  padding-top: 8px;
+}
+
+.h6-bronze {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  color: #A57164;
+  border-top: 1px solid #A57164;
+  border-radius: 32px;
+  padding-top: 8px;
+}
+
+.h6-default {
+  margin-top: 16px;
+  margin-bottom: 0px;
+  color: #333;
+  border-top: 1px solid #333;
+  border-radius: 32px;
+  padding-top: 8px;
+}
+
+.round-120 {
+  border-radius: 50% !important;
+  min-height: 120px;
+  min-width: 120px;
+  max-width: 120px;
+  max-height: 120px;
+}
+
+.round-96 {
+  border-radius: 50% !important;
+  min-height: 96px;
+  min-width: 96px;
+  max-width: 96px;
+  max-height: 96px;
+}
+
+.round-60 {
+  border-radius: 50% !important;
+  min-height: 60px;
+  min-width: 60px;
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.fill-silver {
+  background-color: #fbfbfb;
+  border-color: #808080;
+}
+
+.fill-bronze {
+  background-color: #fcfafa;
+  border-color: #A57164;
+}
+
+.over-p-lr {
+  padding-right: 0px !important;
+  padding-left: 0px !important;
+}
+
+.shine-div {
+  display: inline-flex;
+  flex-direction: column; 
+  margin-left: 25px;
+  margin-top: 15px;
+  vertical-align: top; 
+}
+
+.shine {
+  background: #f6f7f8;
+  background-image: linear-gradient(to right, #f6f7f8 0%, #BBB 20%, #f6f7f8 40%, #f6f7f8 100%);
+  background-repeat: no-repeat;
+  background-size: 800px 104px; 
+  display: inline-block;
+  position: relative; 
+  
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards; 
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-name: placeholderShimmer;
+  -webkit-animation-timing-function: linear;
+}
+  
+.box {
+  height: 104px;
+  width: 100px;
+}
+ 
+.lines {
+  height: 10px;
+  margin-top: 10px;
+  width: 200px; 
+}
+  
+.photo {
+  display: block !important;
+  width: 325px; 
+  height: 100px; 
+  margin-top: 15px;
+}
+  
+@-webkit-keyframes placeholderShimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  
+  100% {
+    background-position: 468px 0; 
+  }
+}
+
+.font-medium {
+  font-family: 'Product Sans Medium Regular' !important;
+}
+
+.font-regular {
+  font-family: 'Product Sans Regular' !important;
+}
+
+.event-icon {
+  margin-left: 0px;
+  font-size: 18px;
+}
+
+.about-icon {
+  margin-left: 0px;
+  font-size: 36px;
+}
+
+@font-face {
+    font-family: 'Product Sans Regular';
+    font-display: swap;
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Regular'), url('assets/fonts/ProductSans-Regular.woff') format('woff');
+}
+@font-face {
+    font-family: 'Product Sans Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Italic'), url('assets/fonts/ProductSans-Italic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Product Sans Thin Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Thin Regular'), url('assets/fonts/ProductSans-Thin.woff') format('woff');
+}
+@font-face {
+    font-family: 'Product Sans Light Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Light Regular'), url('assets/fonts/ProductSans-Light.woff') format('woff');
+}
+@font-face {
+    font-family: 'Product Sans Medium Regular';
+    font-style: normal;
+    font-display: swap;
+    font-weight: normal;
+    src: local('Product Sans Medium Regular'), url('assets/fonts/ProductSans-Medium.woff') format('woff');
+}
+@font-face {
+    font-family: 'Product Sans Black Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Black Regular'), url('assets/fonts/ProductSans-Black.woff') format('woff');
+}
+@font-face {
+    font-family: 'Product Sans Thin Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Thin Italic'), url('assets/fonts/ProductSans-ThinItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Product Sans Light Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Light Italic'), url('assets/fonts/ProductSans-LightItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Product Sans Medium Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Medium Italic'), url('assets/fonts/ProductSans-MediumItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Product Sans Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Bold'), url('assets/fonts/ProductSans-Bold.woff') format('woff');
+}
+@font-face {
+    font-family: 'Product Sans Bold Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Bold Italic'), url('assets/fonts/ProductSans-BoldItalic.woff') format('woff');
+}
+@font-face {
+    font-family: 'Product Sans Black Italic';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Product Sans Black Italic'), url('assets/fonts/ProductSans-BlackItalic.woff') format('woff');
+}

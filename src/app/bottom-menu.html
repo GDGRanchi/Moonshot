@@ -1,0 +1,20 @@
+<div class="row text-center">
+    <div class="col-md-12" style=" margin: 8px">
+        <img [src]='logoPath' height="60px" style="margin: -8px"/>
+    </div>
+    <div class="col-md-12" style=" margin: 8px">
+        <a (click)="closeBottomMenu()" routerLink="/" routerLinkActive="active"><button style="width: 100%;" nz-button nzType="default">Home</button></a>
+    </div>
+    <div class="col-md-12" style=" margin: 8px">
+        <a (click)="closeBottomMenu()" routerLink="/events" routerLinkActive="active"><button style="width: 100%;" nz-button nzType="default">Events</button></a>
+    </div>
+    <div class="col-md-12" style=" margin: 8px">
+        <a (click)="closeBottomMenu()" routerLink="/team" routerLinkActive="active"><button style="width: 100%;" nz-button nzType="default">Team</button></a>
+    </div>
+    <div class="col-md-12" style=" margin: 8px">
+        <a (click)="closeBottomMenu()" routerLink="/contact" routerLinkActive="active"><button style="width: 100%;" nz-button nzType="default">Contact</button></a>
+    </div>
+    <div class="col-md-12" style=" margin: 8px">
+        <a (click)="closeBottomMenu()" target="_blank" href="{{meetupPath}}"><button style="width: 100%; background-color: #F64060; border-color: #F64060" nz-button nzType="primary">Become a Member</button></a>
+    </div>
+</div>

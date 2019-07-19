@@ -1,0 +1,52 @@
+<div class="container text-center mt-5 mb-5">
+  <h4 class="pt-5 pb-2 mt-5">Upcoming Events & Meetups</h4>
+  <p class="pb-2 font-regular">Attend our meetups and get skilled up. Below is a list of upcoming events that are listed in our official Meetup page. You might need to register for the event through the event page by clicking 'More Details' to attend the events and meetups. Please read the event prerequisites as some events like study jams might require you to carry laptops to the venue.</p>
+  <div *ngIf="!isFetchEventsComplete" class="row">
+    <div class="col-md-4 over-p-lr">
+      <div class="material-border">
+        <div class="box shine"></div>
+        <div class="shine-div">
+          <div class="lines shine"></div>
+          <div class="lines shine"></div>
+          <div class="lines shine"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 over-p-lr">
+      <div class="material-border">
+        <div class="box shine"></div>
+        <div class="shine-div">
+          <div class="lines shine"></div>
+          <div class="lines shine"></div>
+          <div class="lines shine"></div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 over-p-lr">
+      <div class="material-border">
+        <div class="box shine"></div>
+        <div class="shine-div">
+          <div class="lines shine"></div>
+          <div class="lines shine"></div>
+          <div class="lines shine"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="isFetchEventsComplete" class="row">
+    <div *ngFor="let data of upcomingEvents" class="col-md-4 over-p-lr">
+      <div class="material-border">
+        <h5 class="font-medium">{{data.name}}</h5>
+        <div class="mt-4">
+          <p class="font-regular">
+            <i class="mr-2 event-icon" nz-icon [nzType]="'clock-circle'"></i>{{data.time}}, {{data.date}}.
+            <br><i class="event-icon mr-2" nz-icon [nzType]="'car'"></i>{{data.venue}}.
+            <br><i class="event-icon mr-2" nz-icon [nzType]="'smile'"></i>{{data.count}}
+            attending.</p>
+        </div>
+        <a target="_blank" href="{{data.link}}"><button style="width: 100%" nz-button [nzSize]="large"
+            nzType="primary">More Details</button></a>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+{
+    "leads": [
+        {
+            "name": "John Doe",
+            "image": "assets/icons/placeholder.svg",
+            "role": "Community Organizer",
+            "twitter": "https://twitter.com",
+            "linkedin": "https://www.linkedin.com/in/"
+        },
+        {
+            "name": "John Doe",
+            "role": "Community Co-Organizer",
+            "twitter": "https://twitter.com"
+        },
+        {
+            "name": "John Doe",
+            "role": "GDG Cloud Organizer",
+            "twitter": "https://twitter.com",
+            "linkedin": "https://www.linkedin.com/in/",
+            "github": "https://github.com",
+            "link": "https://developers.google.com"
+        },
+        {
+            "name": "John Doe",
+            "role": "WTM Organizer",
+            "twitter": "https://twitter.com"
+        }
+    ],
+    "core": [
+        {
+            "name": "John Doe",
+            "role": "Outreach Lead",
+            "twitter": "https://twitter.com",
+            "linkedin": "https://www.linkedin.com/in/"
+        },
+        {
+            "name": "John Doe",
+            "role": "Core Organizer",
+            "linkedin": "https://www.linkedin.com/in"
+        }
+    ],
+    "volunteers": [
+        {
+            "name": "John Doe",
+            "role": "Volunteer",
+            "twitter": "https://twitter.com",
+            "linkedin": "https://www.linkedin.com/in/"
+        }
+    ]
+}

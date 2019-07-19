@@ -1,0 +1,71 @@
+<div class="container text-center mt-5 mb-5">
+    <h4 class="pt-5 pb-2 mt-5">We work as a family!</h4>
+    <p class="pb-2 font-regular">A distinguished team consists of all kinds of
+        persons with lot of skills in different areas. Such is the team in our community as well.
+        <br>We respect talents and give opportunity for those who can do.
+    </p>
+    <div class="row justify-content-center">
+        <div class="col-md 12 text-center">
+            <div class="material-border">
+                <h4 *ngIf="leads.length > 0" class="m-3">Community Leaders</h4>
+                <p *ngIf="leads.length > 0" class="pb-2 font-regular">
+                    Meet our pillars of strength. All the events organized are supervised and are given overall attention by the core team.
+                    <br>Should you need any assistance in administrative aspects of the community, please contact any one of our core team.
+                </p>
+                <div *ngIf="leads.length > 0" class="row justify-content-center">
+                    <div *ngFor="let lead of leads" class="col-md-3">
+                        <img *ngIf="lead.image && lead.image !== ''" class="m-2 round-120" [src]='lead.image' />
+                        <img *ngIf="!lead.image || lead.image === ''" class="m-2 round-120" src="assets/icons/placeholder.svg" />
+                        <h4 class="pb-0 mb-0 font-regular">{{lead.name}}</h4>
+                        <p class="pb-0 mb-1 font-regular color-333333">{{lead.role}}</p>
+                        <div class="mb-5">
+                            <a *ngIf="lead.twitter" target="_blank" href="{{lead.twitter}}"><i style="color: rgb(29, 161, 242); margin-left: 0px" nz-icon [nzTheme]="'fill'" [nzType]="'twitter-circle'"></i></a> 
+                            <a *ngIf="lead.linkedin" target="_blank" href="{{lead.linkedin}}"><i style="color: rgb(0, 119, 181); margin-right: 4px; margin-left: 4px" nz-icon [nzTheme]="'fill'" [nzType]="'linkedin'"></i></a> 
+                            <a *ngIf="lead.github" target="_blank" href="{{lead.github}}"><i style="color: #333; margin-right: 4px; margin-left: 4px" nz-icon [nzType]="'github'"></i></a> 
+                            <a *ngIf="lead.link" target="_blank" href="{{lead.link}}"><i style="color: #333; margin-left: 0px" nz-icon [nzType]="'link'"></i></a> 
+                        </div>
+                    </div>
+                </div>
+                <h5 *ngIf="coreTeam.length > 0" class="m-3">Core Organizing Team</h5>
+                <p *ngIf="coreTeam.length > 0" class="pb-2 font-regular">
+                    The team which puts their heart and soul in making the events happen.
+                    <br> If you enjoyed or experienced a valuable and entertaining day 
+                    of community event, you must probably thank these guys.
+                </p>
+                <div *ngIf="coreTeam.length > 0" class="row justify-content-center">
+                    <div *ngFor="let lead of coreTeam" class="col-md-4">
+                        <img *ngIf="lead.image && lead.image !== ''" class="m-2 round-96" [src]='lead.image' />
+                        <img *ngIf="!lead.image || lead.image === ''" class="m-2 round-96" src="assets/icons/placeholder.svg" />
+                        <h5 class="pb-0 mb-0 font-regular">{{lead.name}}</h5>
+                        <p class="pb-0 mb-1 font-regular color-333333">{{lead.role}}</p>
+                        <div class="mb-5">
+                            <a *ngIf="lead.twitter" target="_blank" href="{{lead.twitter}}"><i style="color: rgb(29, 161, 242); margin-left: 0px" nz-icon [nzTheme]="'fill'" [nzType]="'twitter-circle'"></i></a> 
+                            <a *ngIf="lead.linkedin" target="_blank" href="{{lead.linkedin}}"><i style="color: rgb(0, 119, 181); margin-right: 4px; margin-left: 4px" nz-icon [nzTheme]="'fill'" [nzType]="'linkedin'"></i></a> 
+                            <a *ngIf="lead.github" target="_blank" href="{{lead.github}}"><i style="color: #333; margin-right: 4px; margin-left: 4px" nz-icon [nzType]="'github'"></i></a> 
+                            <a *ngIf="lead.link" target="_blank" href="{{lead.link}}"><i style="color: #333; margin-left: 0px" nz-icon [nzType]="'link'"></i></a> 
+                        </div>
+                    </div>
+                </div>
+                <h5 *ngIf="volunteerTeam.length > 0" class="m-3">Volunteers</h5>
+                <p *ngIf="volunteerTeam.length > 0" class="pb-2 font-regular">
+                    These people are the real heroes who work under the hood whose contributions don't reach to everybody.
+                    <br> We make their efforts go noticed in every possible way and uplift them as a successful community hero!
+                </p>
+                <div *ngIf="volunteerTeam.length > 0" class="row justify-content-center">
+                    <div *ngFor="let lead of volunteerTeam" class="col-md-3">
+                        <img *ngIf="lead.image && lead.image !== ''" class="m-2 round-60" [src]='lead.image' />
+                        <img *ngIf="!lead.image || lead.image === ''" class="m-2 round-60" src="assets/icons/placeholder.svg" />
+                        <p class="pb-0 mb-0 font-regular">{{lead.name}}</p>
+                        <h6 class="pb-0 mb-1 font-regular color-333333">{{lead.role}}</h6>
+                        <div class="mb-5">
+                            <a *ngIf="lead.twitter" target="_blank" href="{{lead.twitter}}"><i style="color: rgb(29, 161, 242); margin-left: 0px" nz-icon [nzTheme]="'fill'" [nzType]="'twitter-circle'"></i></a> 
+                            <a *ngIf="lead.linkedin" target="_blank" href="{{lead.linkedin}}"><i style="color: rgb(0, 119, 181); margin-right: 4px; margin-left: 4px" nz-icon [nzTheme]="'fill'" [nzType]="'linkedin'"></i></a> 
+                            <a *ngIf="lead.github" target="_blank" href="{{lead.github}}"><i style="color: #333; margin-right: 4px; margin-left: 4px" nz-icon [nzType]="'github'"></i></a> 
+                            <a *ngIf="lead.link" target="_blank" href="{{lead.link}}"><i style="color: #333; margin-left: 0px" nz-icon [nzType]="'link'"></i></a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+{
+    "name": "GDG <Chapter Name>",
+    "email": "mail@gdg-chapter-name.com",
+    "mobile": "+91 88888 88888",
+    "logo-path": "assets/icons/logo.png",
+    "meetup-slug": "<meetup-slug> (Eg. gdg-cloud-coimbatore>",
+    "meetup-api-key": "<meetup-api-key>",
+    "facebook": "https://www.facebook.com/",
+    "twitter": "https://www.twitter.com/",
+    "github": "https://github.com",
+    "instagram": "https://www.instagram.com/"
+}
