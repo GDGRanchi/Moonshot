@@ -1,6 +1,6 @@
 # Moonshot
 
-Moonshot is an Angular based template for GDGs to build their Chapter Website.
+Moonshot is an Angular 8 based template for GDGs to build their Chapter Website.
 <img width="100%" src="https://i.imgur.com/D5lZjDt.jpg" alt="Moonshot"/>
 
 ## Table of contents
@@ -9,6 +9,7 @@ Moonshot is an Angular based template for GDGs to build their Chapter Website.
 - [Folder Structure](#folder-structure)
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
+- [Hosting in Firebase](#hosting-in-firebase)
 - [Bugs / Feature Requests](#bugs-and-feature-requests)
 - [Contributing](#contributing)
 - [Creators](#creators)
